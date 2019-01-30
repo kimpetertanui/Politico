@@ -1,0 +1,28 @@
+
+
+.main-nav{
+
+	display: flex;
+	justify-content: space-between;
+	background-color: blue;
+	color: white;
+
+
+
+}
+
+.main-nav > div{
+	padding: 15px;
+
+}
+
+.top-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 70px;
+
+}
+.top-container > div{
+	margin: 10px
+}
