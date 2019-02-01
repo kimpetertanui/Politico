@@ -112,6 +112,7 @@ footer {
 table {
   border-collapse: collapse;
   width: 100%;
+
 }
 
 table, td, th {
@@ -251,4 +252,11 @@ input[type=submit] {
 }
 .plogo{
   width: 60px;
+}
+
+
+.Results{
+  width: auto;
+  height: auto;
+  text-align: center;
 }
