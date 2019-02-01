@@ -1,3 +1,9 @@
+.fa-home, .fa-plus,.fa-user , .fa-trash,.fa-edit,.fa-eye-slash{
+color: white;
+font-size: 20px;
+}
+
+
 * {
   margin: 0px;
   padding: 0px;
