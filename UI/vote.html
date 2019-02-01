@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Politico</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+  <div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="candidates.html">View Candidates</a>
+  <a href="contact.html">Contact</a>
+  <a href="#vote">Vote</a>
+  <a href="view_results.html">Results</a>
+  <div class="topnav-right">
+    <a href="profile.html">Profile</a>
+  </div><br>
+</div>
+	<div class="main-nav">
+		<div class="logo">
+			<h1>POLITICO</h1>
+		</div>
+		<div class="logo">
+			<p></p>
+		</div>
+	</div>
+	<div class="row">
+  <div class="column" >
+    
+    
+  <form>
+    <h3> Dear Voter your vote matters</h3><br>
+
+    <label for="level">Select Post to Vote:</label>
+    <select id="vote" name="vote">
+      <option value="president">President</option>
+      <option value="governor">Governor</option>
+      <option value="senator">Senator</option>
+      <option value="wr">Women Rep</option>
+      <option value="mca">MCA</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+  <div class="column">
+  	
+ <p>You have selected the President option now choose your candidate</p>
+  <table id="presidential-candidates">
+    <form>
+            <tr>
+                <th colspan="5">@2019  Presidential Aspirants</th>
+            </tr>
+        <tr>
+          <th>S.N</th>
+          <th>PHOTO</th>
+          <th>Candidates Name</th>
+          <th>Party</th>
+          <th>Vote For</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><img src="uhuru.jpg"></td>
+          <td>Uhuru Kenyatta</td>
+          <td>TNA</td>
+          <td><input type="radio" name="president"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><img src="rutto.jpg"></td>
+          <td>William Rutto</td>
+          <td>URP</td>
+          <td><input type="radio" name="president"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><img src="raila.jpg"></td>
+          <td>Raila Odinga</td>
+          <td>ODM</td>
+          <td><input type="radio" name="president"></td>
+        </tr>
+        <tr >
+          <td colspan="6"><input type="submit" name="Submit"></td>
+        </tr>
+        
+      </form>
+
+      </table>
+    </form>
+
+  </div>
+</div>
+<footer>
+  <p>Powered by Politico @2019</p>
+</footer>
+</body>
+
+</html>
