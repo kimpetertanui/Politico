@@ -118,8 +118,13 @@ table {
 table, td, th {
   border: 1px solid black;
    height: 50px;
+   text-align: center;
 }
 
+#presidential-candidates tr td img {
+  height: 80px;
+  width: 80px;
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -225,7 +230,7 @@ ul{
 
 }
 
-input[type=text] {
+input[type=text],select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -260,3 +265,4 @@ input[type=submit] {
   height: auto;
   text-align: center;
 }
+
