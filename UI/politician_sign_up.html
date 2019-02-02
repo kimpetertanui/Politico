@@ -7,33 +7,34 @@
 
 </head>
 <body>
+
+ <div class="topnav">
+  <a href="#">Home</a>
+  <a href="view_results.html">View Results</a>
+  <a href="#">Contact Us</a>
+  <div class="topnav-right">
+    <a href="index.html">About</a>
+  </div><br>
+</div>
 	<div class="main-nav">
 		<div class="logo">
-			<p>logo</p>
+			<p>POLITICO</p>
 		</div>
 		<div class="login">
-			<h1>POLITICO</h1>
 			<!-- <a href="index.html">Login</a> -->
 		</div>
 	</div>
 
-	<div class="header">
-  	<h2>Register</h2>
-    </div>
-	
+	<br>
   <form method="POST" >
   	<div class="input-group">
-      <label>Full Names</label>
-      <input type="text" name="name">
+      <label> Name</label>
+      <input type="text" name="name" placeholder="Enter Full Names.....">
     </div>
   	<div class="input-group">
   	  <label>National ID</label>
   	  <input type="text" name="id">
   	</div>
-    <div class="input-group">
-      <label>Post Interested</label>
-      <input type="text" name="id">
-    </div>
 
   	<div class="input-group">
   	  <label>Password</label>
@@ -43,19 +44,49 @@
       <label>Confirm Password</label>
       <input type="password" name="password2">
     </div>
-  
+    <!-- <div class="input-group">
+      <label>Post of Choice</label>
+       <select id="postname" name="postname">
+      <option value="senate">Senator</option>
+      <option value="wr">Wowen Representative</option>
+      <option value="mp">Member of National Asembly</option>
+      <option value="president">President</option>
+      <option value="governor">Governor</option>
+      <option value="mca">Member of County Asembly</option>
+    </select>
+    </div> -->
+
   	<div class="input-group">
   	  <button type="submit" class="btn" name="register">Register</button>
   	</div>
-  	<p>
-  		 Have  an account? <a href="politician_login.html">Login</a>
-  	</p>
+  	
   </form>
+  <!-- <br><br>
 
-</body>
+  <form>
+    <h3>Create Goverment Office</h3><br>
+    <label for="pname">Full Names:</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter full names..">
+    <label for="ID">ID NO:</label>
+    <input type="text" id="ID" name="idno" placeholder="Enter Number..">
+
+    <label for="level">Select Post:</label>
+    <select id="postname" name="postname">
+      <option value="senate">Senator</option>
+      <option value="wr">Wowen Representative</option>
+      <option value="mp">Member of National Asembly</option>
+      <option value="president">President</option>
+      <option value="governor">Governor</option>
+      <option value="mca">Member of County Asembly</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form> -->
+
 <br><br>
-	<footer>
-	<p>Powered by Politico @2019</p>
+  <footer>
+  <p>Powered by Politico @2019</p>
 </footer>
+</body>
 
 </html>
