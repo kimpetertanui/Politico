@@ -4,6 +4,8 @@
   <title>Politico Create Party</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+
 
 
 </head>
@@ -17,14 +19,13 @@
  <!-- The sidebar -->
  <br><br>
 <div class="sidebar">
-   <a href="#home"><img class="adminlogo" src="admin.png"></a>
-  <a href="#home"><i class="fa fa-fw fa-home"></i>Home</a>
-  <a href="#party"><i class="fa fa-plus" aria-hidden="true"></i>Create Party</a>
-  <a href="create_post.html"><i class="fa fa-fw fa-user"></i>Create Post</a>
-  <a href="edit_party.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit Parties</a>
-  <a href="delete_party.html"><i class="fa fa-trash" aria-hidden="true"></i>Delete Parties</a>
-  <a href="view_results.html">View Results</a>
-  <a href="profile.html"><i class="fa fa-user"></i>Profile</a>
+  <a href="#"><i class="fa fa-fw fa-home"></i>Home</a>
+  <a href="create_party.html"><i class="fas fa-plus" aria-hidden="true"></i>Create Party</a>
+  <a href="create_post.html"><i class="fas fa-plus"></i>Create Post</a>
+  <a href="edit_party.html"><i class="fas fa-edit" aria-hidden="true"></i>Edit Parties</a>
+  <a href="delete_party.html"><i class="fas fa-trash" aria-hidden="true"></i>Delete Parties</a>
+  <a href="view_results.html"><i class="fas fa-eye" aria-hidden="true">View Results</a>
+  <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
 </div>
 <div>
   
@@ -42,7 +43,7 @@
     <label for="motto">Party Motto:</label>
     <input type="text" id="motto" name="motto" placeholder="Enter Party Motto..">
 
-     <label for="Party-image">Party Logo:</label><br>
+     <label style="width: 900px" for="Party-image">Party Logo:</label><br>
      <input class="plogo" type="file" name="logo" id="logo">
   
     <input type="submit" value="Submit">
