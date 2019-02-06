@@ -81,7 +81,7 @@ def party_update(partyID):
 
             return make_response(jsonify({
                 "status":200,
-                 "data":"updated  the party with ID {} ".format(partyID)
+                 "data":"updated  the party with partyID {} ".format(partyID)
             }),200)
         update_party={
             "party_name":party['party_name']
