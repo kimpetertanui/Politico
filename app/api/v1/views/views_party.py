@@ -69,6 +69,29 @@ def deleteParty(partyID):
         "error": "could not find party with ID {}".format(partyID)
     }), 404)
 
+@b_party.route('updateParty/<partyID>',methods=['PATCH'])
+def party_update(partyID):
+    for party in parties:
+        if party ['partyID']==int(partyID):
+            data=request.get_json()
+            new_name=data['party_name']
+            party['party_name']=data['party_name']
+
+
+            return make_response(jsonify({
+                "status":200,
+                 "data":"updated  the party with ID {}".format(partyID)
+            }),200)
+        update_party={
+            "party_name":party['party_name']
+
+        }
+        parties.append(update_party)
+        return make_response(jsonify({
+            "status":200,
+            "data":[update_party]
+        }), 200)
+
 
 if __name__ == '__main__':
     b_party.run(debug=True)
