@@ -17,5 +17,3 @@ class Parties:
         }
 
         return parties.append(party)
-
-
