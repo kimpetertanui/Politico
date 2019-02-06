@@ -11,11 +11,11 @@ def hello():
     return 'Flask API endpoint'
 
 
-# @b_party.route("/getAllParties",methods=['GET'])
-# def getAllParties():
-#     return make_response(jsonify(
-#         {"data":parties},
-#         {"status":200}))
+@b_party.route("/getAllParties",methods=['GET'])
+def getAllParties():
+    return make_response(jsonify(
+        {"status":200},
+        {"data":parties}))
 
 
 # @b_party.route("/getParty/<partyID>",methods=['GET'])
