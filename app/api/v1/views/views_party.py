@@ -18,16 +18,16 @@ def getAllParties():
         {"data":parties}))
 
 
-# @b_party.route("/getParty/<partyID>",methods=['GET'])
-# def getParty(partyID):
-#     for party in parties:
-#         if partyID == partyID:
-#             return make_response(jsonify(party), 200)
-#         else:
-#             return make_response(jsonify({
-#                 "status": 404,
-#                 "error": "Could not find party with id {}".format(partyID)
-#             }), 404)
+@b_party.route("/getParty/<partyID>",methods=['GET'])
+def getParty(partyID):
+    for party in parties:
+        if partyID == partyID:
+            return make_response(jsonify(party), 200)
+        else:
+            return make_response(jsonify({
+                "status": 404,
+                "error": "Could not find party with id {}".format(partyID)
+            }), 404)
 
 
 @b_party.route("/addparty", methods=['POST'])
