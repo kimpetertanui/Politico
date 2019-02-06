@@ -6,7 +6,7 @@ import random
 b_party= Blueprint('parties', __name__, url_prefix='/api/v1')
 
 
-@b_party.route('/get_hello', methods=['GET'])
+@b_party.route('/Home', methods=['GET'])
 def hello():
     return 'Flask API endpoint'
 
