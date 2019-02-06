@@ -30,6 +30,7 @@ def getParty(partyID):
             }), 404)
 
 
+
 @b_party.route("/addparty", methods=['POST'])
 def addparty():
     json_data = request.get_json()
