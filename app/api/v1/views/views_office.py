@@ -49,7 +49,7 @@ def addOffice():
     }), 200)
 
 
-@v1.route("/deleteOffice/<officeID>", methods=['POST'])
+@v1.route("/deleteOffice/<officeID>", methods=['DELETE'])
 def deleteOffice(officeID):
     for office in offices:
         if office["id"] == int(officeID):
