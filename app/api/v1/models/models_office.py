@@ -5,6 +5,7 @@ class Offices:
         self.type=type
         self.name=name
 
+## creating a political office
 
     def createoffice(self):
         office={
@@ -15,3 +16,6 @@ class Offices:
         }
 
         return offices.append(office)
+
+    def welcome(self):
+        return "Welcome user"
