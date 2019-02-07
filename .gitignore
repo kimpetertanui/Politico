@@ -1,6 +1,6 @@
 .vscode
 .idea
-_pycache
+_pycache_
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
