@@ -52,6 +52,16 @@ class Test_parties(unittest.TestCase):
     def setUp(self):
         self.app=app
         self.client=self.app.test_client()
+        self.data={
+            "party_name":"TNA",
+            "hqAddress":"Nairobi",
+            "logoUrl":"Logo"
+        }
+        self.update={
+            "party_name": "Jupilee",
+            "hqAddress": "Eldoret",
+            "logoUrl": "NewLogo"
+        }
 
     def post(self, path='/api/v1/parties', data={}):
         if not data:
@@ -69,6 +79,13 @@ class Test_parties(unittest.TestCase):
          path = '/api/v1/parties'
          res=self.client.get(path='api/v1/parties')
          self.assertEquals(res.status_code,200)
+
+    def test_editing_a_single_party(self):
+        post = self.client.post(path='api/v1/parties', data=json.dumps(self.data), content_type='application/json')
+        partyID = post.json['partyID']
+        path = '/api/v1/parties{}'.format(partyID)
+        response = self.client.put(path, data=json.dumps(self.update), content_type='application/json')
+        self.assertEqual(response.status_code, 200)
 
 
 
