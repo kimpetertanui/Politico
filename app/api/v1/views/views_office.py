@@ -10,12 +10,12 @@ def hello():
     return 'Flask API endpoint'
 
 
-@v1.route("/getAllOffices",methods=['GET'])
+@v1.route("/offices",methods=['GET'])
 def getAllOffices():
     return make_response(jsonify(offices), 200)
 
 
-@v1.route("/getOffice/<officeID>",methods=['GET'])
+@v1.route("/offices/<officeID>",methods=['GET'])
 def getOffice(officeID):
     for office in offices:
         if office["id"] == int(officeID):
@@ -27,7 +27,7 @@ def getOffice(officeID):
     }), 404)
 
 
-@v1.route("/addOffice", methods=['POST'])
+@v1.route("/offices", methods=['POST'])
 def addOffice():
     json_data = request.get_json()
 
@@ -49,7 +49,7 @@ def addOffice():
     }), 200)
 
 
-@v1.route("/deleteOffice/<officeID>", methods=['DELETE'])
+@v1.route("/offices/<officeID>", methods=['DELETE'])
 def deleteOffice(officeID):
     for office in offices:
         if office["id"] == int(officeID):
@@ -62,7 +62,29 @@ def deleteOffice(officeID):
     return make_response(jsonify({
         "status": 404,
         "error": "could not find office with ID {}".format(officeID)
-    }), 404)
+    }),404)
+@v1.route('/offices/<officeID>',methods='PATCH')
+def party_update(officeID):
+    for office in offices:
+        if office ['officeID']==int(officeID):
+            data=request.get_json()
+            new_name=data['office_name']
+            office['office_name']=data['office_name']
+
+
+            return make_response(jsonify({
+                "status":200,
+                 "data":"updated  the office with officeID {} ".format(officeID)
+            }),200)
+        update_office={
+            "office_name":office['office_name']
+
+        }
+        offices.append(update_office)
+        return make_response(jsonify({
+            "status":200,
+            "data":[update_office]
+        }), 200)
 
 
 if __name__ == "__main__":
