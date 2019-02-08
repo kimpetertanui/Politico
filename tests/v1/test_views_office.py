@@ -51,6 +51,12 @@ class Test_Offices(unittest.TestCase):
         response = self.client.delete(path, content_type='application/json')
         self.assertEqual(response.status_code, 200)
 
+    def test_posting_an_office(self):
+        res = self.post()
+        self.assertEqual(res.status_code, 200)
+        self.assertTrue(res.json["data"][0]['id'])
+        self.assertEqual(res.json['status'], 200)
+
 
     def tearDown(self):
         self.app=None
