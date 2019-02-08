@@ -77,16 +77,19 @@ def party_update(officeID):
                 "status":200,
                  "data":"updated  the office with officeID {} ".format(officeID)
             }),200)
-        update_office={
-            "office_name":office['office_name']
+        elif office['officeID']==None:
+            return "Enter an ID to make update"
+        else:
+            update_office = {
+                "office_name": office['office_name']
 
-        }
-        offices.append(update_office)
-        return make_response(jsonify({
-            "status":200,
-            "data":[update_office]
-        }), 200)
-       
+            }
+            offices.append(update_office)
+            return make_response(jsonify({
+                "status": 200,
+                "data": [update_office]
+            }), 200)
+
 
 
 if __name__ == "__main__":
