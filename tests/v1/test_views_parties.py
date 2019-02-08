@@ -1,4 +1,4 @@
-
+from run import app
 import unittest
 import json
 from  run import  app
@@ -56,10 +56,10 @@ class Test_parties(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_posting_a_party(self):
-        res = self.post()
-        self.assertEqual(res.status_code, 200)
-        self.assertTrue(res.json["data"][0]['partyID'])
-        self.assertEqual(res.json['status'],200)
+        resp = self.post()
+        self.assertEqual(resp.status_code, 200)
+        self.assertTrue(resp.json["data"][0]['partyID'])
+        self.assertEqual(resp.json['status'], 200)
 
 
 
