@@ -57,7 +57,7 @@ def deleteOffice(officeID):
             offices.remove(office)
             return make_response(jsonify({
                 "status": 200,
-                "data": "deleted successfully"
+                "data": "the office has been deleted successfully"
             }), 200)
 
     return make_response(jsonify({
