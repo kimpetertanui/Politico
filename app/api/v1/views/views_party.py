@@ -11,14 +11,14 @@ def hello():
     return 'Flask API endpoint'
 
 
-@b_party.route("/getAllParties",methods=['GET'])
+@b_party.route("/parties",methods=['GET'])
 def getAllParties():
     return make_response(jsonify(
         {"status":200},
         {"data":parties}))
 
 
-@b_party.route("/getParty/<partyID>",methods=['GET'])
+@b_party.route("/parties/<partyID>",methods=['GET'])
 def getParty(partyID):
     for party in parties:
         if partyID == partyID:
@@ -31,7 +31,7 @@ def getParty(partyID):
 
 
 
-@b_party.route("/addparty", methods=['POST'])
+@b_party.route("/parties", methods=['POST'])
 def addparty():
     json_data = request.get_json()
 
@@ -55,7 +55,7 @@ def addparty():
     }), 200)
 
 
-@b_party.route("/deleteParty/<partyID>", methods=['DELETE'])
+@b_party.route("/parties/<partyID>", methods=['DELETE'])
 def deleteParty(partyID):
     for party in parties:
         if party["partyID"] == int(partyID):
@@ -70,7 +70,7 @@ def deleteParty(partyID):
         "error": "could not find party with ID {}".format(partyID)
     }), 404)
 
-@b_party.route('updateParty/<partyID>',methods=['PATCH'])
+@b_party.route('parties/<partyID>',methods=['PATCH'])
 def party_update(partyID):
     for party in parties:
         if party ['partyID']==int(partyID):
