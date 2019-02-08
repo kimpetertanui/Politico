@@ -47,6 +47,14 @@ class Test_parties(unittest.TestCase):
         response = self.client.put(path, data=json.dumps(self.update), content_type='application/json')
         self.assertEqual(response.status_code, 404)
 
+    def test_deleting_a_party(self):
+        post = self.client.post(path='api/v1/parties', data=json.dumps(self.data),
+                                content_type='application/json')
+        id = post.json["data"][0]['id']
+        path = '/api/v1/parties/{}'.format(id)
+        response = self.client.delete(path, content_type='application/json')
+        self.assertEqual(response.status_code, 200)
+
 
 
     def tearDown(self):
