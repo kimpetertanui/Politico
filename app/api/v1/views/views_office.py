@@ -10,12 +10,12 @@ def hello():
     return 'Flask API endpoint'
 
 
-@v1.route("/getAllOffices",methods=['GET'])
+@v1.route("/parties",methods=['GET'])
 def getAllOffices():
     return make_response(jsonify(offices), 200)
 
 
-@v1.route("/getOffice/<officeID>",methods=['GET'])
+@v1.route("/parties/<officeID>",methods=['GET'])
 def getOffice(officeID):
     for office in offices:
         if office["id"] == int(officeID):
@@ -27,7 +27,7 @@ def getOffice(officeID):
     }), 404)
 
 
-@v1.route("/addOffice", methods=['POST'])
+@v1.route("/parties", methods=['POST'])
 def addOffice():
     json_data = request.get_json()
 
@@ -49,7 +49,7 @@ def addOffice():
     }), 200)
 
 
-@v1.route("/deleteOffice/<officeID>", methods=['DELETE'])
+@v1.route("/parties/<officeID>", methods=['DELETE'])
 def deleteOffice(officeID):
     for office in offices:
         if office["id"] == int(officeID):
