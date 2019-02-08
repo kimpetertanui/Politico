@@ -33,6 +33,7 @@ class Test_Offices(unittest.TestCase):
 
     def test_getting_single_office(self):
          path = '/api/v1/offices'
+
          res=self.client.get(path='api/v1/offices')
          self.assertEquals(res.status_code,200)
 
