@@ -1,7 +1,7 @@
-from run import app
+
 import unittest
 import json
-
+from  run import  app
 from . import PoliticoTest
 
 
@@ -50,10 +50,16 @@ class Test_parties(unittest.TestCase):
     def test_deleting_a_party(self):
         post = self.client.post(path='api/v1/parties', data=json.dumps(self.data),
                                 content_type='application/json')
-        id = post.json["data"][0]['id']
+        id = post.json["data"][0]['partyID']
         path = '/api/v1/parties/{}'.format(id)
         response = self.client.delete(path, content_type='application/json')
         self.assertEqual(response.status_code, 200)
+
+    def test_posting_a_party(self):
+        res = self.post()
+        self.assertEqual(res.status_code, 200)
+        self.assertTrue(res.json["data"][0]['partyID'])
+        self.assertEqual(res.json['status'],200)
 
 
 
