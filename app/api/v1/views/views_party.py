@@ -6,9 +6,9 @@ import random
 b_party= Blueprint('parties', __name__, url_prefix='/api/v1')
 
 
-@b_party.route('/Home', methods=['GET'])
+@b_party.route('/index', methods=['GET'])
 def hello():
-    return 'Flask API endpoint'
+    return 'POLITICO'
 
 
 @b_party.route("/parties",methods=['GET'])
@@ -33,12 +33,13 @@ def getParty(partyID):
 
 @b_party.route("/parties", methods=['POST'])
 def addparty():
-    json_data = request.get_json()
-
+    json_data = request.get_json(force=True)
     partyID = random.randint(3, 10)
+    print("##")
+    print(json_data )
     party_name = json_data["party_name"]
     hqAddress = json_data["hqAddress"]
-    logoUrl=json_data['logoUrl']
+    logoUrl=json_data["logoUrl"]
 
     new_party = {
         "partyID":partyID,
@@ -70,6 +71,8 @@ def deleteParty(partyID):
         "error": "could not find party with ID {}".format(partyID)
     }), 404)
 
+
+
 @b_party.route('parties/<partyID>',methods=['PATCH'])
 def party_update(partyID):
     for party in parties:
@@ -92,6 +95,8 @@ def party_update(partyID):
             "status":200,
             "data":[update_party]
         }), 200)
+
+
 
 
 if __name__ == '__main__':

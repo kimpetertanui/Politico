@@ -5,9 +5,9 @@ import random
 v1= Blueprint('api_v1', __name__, url_prefix='/api/v1')
 
 
-@v1.route('/get_hello', methods=['GET'])
+@v1.route('/index', methods=['GET'])
 def hello():
-    return 'Flask API endpoint'
+    return 'POLITICO '
 
 
 @v1.route("/offices",methods=['GET'])
