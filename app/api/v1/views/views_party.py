@@ -58,6 +58,7 @@ def addparty():
 
 @b_party.route("/parties/<partyID>", methods=['DELETE'])
 def deleteParty(partyID):
+
     for party in parties:
         if party["partyID"] == int(partyID):
             parties.remove(party)
@@ -65,11 +66,15 @@ def deleteParty(partyID):
                 "status": 200,
                 "data": "deleted successfully"
             }), 200)
+        elif not partyID :
+            return "Please entere party ID to delete"
+        else:
+            return make_response(jsonify({
+                "status": 404,
+                "error": "could not find party with ID {}".format(partyID)
+            }), 404)
 
-    return make_response(jsonify({
-        "status": 404,
-        "error": "could not find party with ID {}".format(partyID)
-    }), 404)
+
 
 
 
@@ -80,21 +85,22 @@ def party_update(partyID):
             data=request.get_json()
             new_name=data['party_name']
             party['party_name']=data['party_name']
-
-
             return make_response(jsonify({
                 "status":200,
                  "data":"updated  the party with partyID {} ".format(partyID)
             }),200)
-        update_party={
-            "party_name":party['party_name']
+        elif party in parties:
+            return "Party Already exist"
+        else:
+            update_party = {
+                "party_name": party['party_name']
 
-        }
-        parties.append(update_party)
-        return make_response(jsonify({
-            "status":200,
-            "data":[update_party]
-        }), 200)
+            }
+            parties.append(update_party)
+            return make_response(jsonify({
+                "status": 200,
+                "data": [update_party]
+            }), 200)
 
 
 
