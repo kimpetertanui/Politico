@@ -80,7 +80,7 @@ def deleteOffice(officeID):
 
 
 @v1.route('/offices/<officeID>',methods=['PATCH'])
-def party_update(officeID):
+def office_update(officeID):
     for office in offices:
         if office ['officeID']==int(officeID):
             data=request.get_json()
