@@ -4,11 +4,9 @@ import random
 
 v1= Blueprint('api_v1', __name__, url_prefix='/api/v1')
 
-
 @v1.route('/index', methods=['GET'])
 def hello():
     return 'POLITICO '
-
 
 @v1.route("/offices",methods=['GET'])
 def getAllOffices():
