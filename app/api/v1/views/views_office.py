@@ -14,6 +14,7 @@ def getAllOffices():
 
 
 @v1.route("/offices/<officeID>",methods=['GET'])
+## this is a method to get a specific office
 def getOffice(officeID):
     for office in offices:
         if office["id"] == int(officeID):
@@ -21,7 +22,7 @@ def getOffice(officeID):
 
     return make_response(jsonify({
         "code": 404,
-        "error": "Could not find office with id {}".format(officeID)
+        "message": "Could not find office with id {}".format(officeID)
     }), 404)
 
 
@@ -81,8 +82,6 @@ def party_update(officeID,office_name):
                 "status": 200,
                 "data": [update_office]
             }), 200)
-
-
 
 
 
