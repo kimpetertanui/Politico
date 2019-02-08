@@ -21,10 +21,17 @@ def getOffice(officeID):
         if office["id"] == int(officeID):
             return make_response(jsonify(office), 200)
 
-    return make_response(jsonify({
-        "code": 404,
-        "error": "Could not find office with id {}".format(officeID)
-    }), 404)
+        elif officeID==None:
+            make_response(jsonify({
+                "status":400,
+                "error":"Enter valid info"
+            }),400)
+
+        else:
+            return make_response(jsonify({
+                "code": 404,
+                "error": "Could not find office with id {}".format(officeID)
+            }), 404)
 
 
 @v1.route("/offices", methods=['POST'])
@@ -85,15 +92,16 @@ def party_update(officeID):
                 "status":200,
                  "data":"updated  the office with officeID {} ".format(officeID)
             }),200)
-        update_office={
-            "office_name":office['office_name']
+        else:
+            update_office = {
+                "office_name": office['office_name']
 
-        }
-        offices.append(update_office)
-        return make_response(jsonify({
-            "status":200,
-            "data":[update_office]
-        }), 200)
+            }
+            offices.append(update_office)
+            return make_response(jsonify({
+                "status": 200,
+                "data": [update_office]
+            }), 200)
 
 
 
