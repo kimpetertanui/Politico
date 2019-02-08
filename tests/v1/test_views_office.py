@@ -44,6 +44,12 @@ class Test_Offices(unittest.TestCase):
         response = self.client.put(path, data=json.dumps(self.office_update), content_type='application/json')
         self.assertEqual(response.status_code, 404)
 
+    def test_deleting_an_office(self):
+        post = self.client.post(path='api/v1/offices', data=json.dumps(self.office_data), content_type='application/json')
+        id = post.json["data"][0]['id']
+        path = '/api/v1/offices/{}'.format(id)
+        response = self.client.delete(path, content_type='application/json')
+        self.assertEqual(response.status_code, 200)
 
 
     def tearDown(self):
