@@ -18,4 +18,4 @@ class Offices:
         return offices.append(office)
 
     def welcome(self):
-        return "Welcome user"
+        return "Welcome admin"
