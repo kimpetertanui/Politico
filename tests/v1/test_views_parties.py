@@ -24,16 +24,7 @@ from . import PoliticoTest
     #     result = json.loads(res.data.decode('utf-8'))
     #     self.assertEqual(result['status'], 400)
 
-    # def test_get_party(self):
-    #     res=self.client.get("api/v1/parties")
-    #     result = json.loads(res.data.decode('utf-8'))
-    #     self.assertEqual(result['status'], 200)
-    # def test_empty_list(self):
-    #     res=self.client.get("api/v1/parties")
-    #     result=json.loads(res.data.decode('utf-8'))
-    #     self.assertEqual(result['data'], [])
-
-
+    #
 
 
 
@@ -53,11 +44,13 @@ class Test_parties(unittest.TestCase):
         self.app=app
         self.client=self.app.test_client()
         self.data={
+            "partyID": 1,
             "party_name":"TNA",
             "hqAddress":"Nairobi",
             "logoUrl":"Logo"
         }
         self.update={
+            "partyID": 2,
             "party_name": "Jupilee",
             "hqAddress": "Eldoret",
             "logoUrl": "NewLogo"
@@ -82,10 +75,10 @@ class Test_parties(unittest.TestCase):
 
     def test_editing_a_single_party(self):
         post = self.client.post(path='api/v1/parties', data=json.dumps(self.data), content_type='application/json')
-        partyID = post.json['partyID']
+        partyID = post.json["data"][0]['partyID']
         path = '/api/v1/parties{}'.format(partyID)
         response = self.client.put(path, data=json.dumps(self.update), content_type='application/json')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 404)
 
 
 
