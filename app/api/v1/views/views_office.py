@@ -39,6 +39,7 @@ def addOffice():
         "id": id,
         "type": office_type,
         "name": office_name
+    
     }
 
     offices.append(new_office)
