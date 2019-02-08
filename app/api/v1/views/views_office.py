@@ -63,30 +63,26 @@ def deleteOffice(officeID):
         "error": "could not find office with ID {}".format(officeID)
     }),404)
 @v1.route('/offices/<officeID>',methods=['PATCH'])
-def party_update(officeID):
+def party_update(officeID,office_name):
     for office in offices:
-        if office ['officeID']==int(officeID):
-            data=request.get_json()
-            new_name=data['office_name']
-            office['office_name']=data['office_name']
-
+        # if office ['officeID']==int(officeID):
+        #     data=request.get_json()
+        #     new_name=data['office_name']
+        #     office['office_name']=data['office_name']
+        if not officeID or not office_name:
 
             return make_response(jsonify({
                 "status":200,
                  "data":"updated  the office with officeID {} ".format(officeID)
             }),200)
-        elif office['officeID']==None:
-            return "Enter an ID to make update"
-        else:
-            update_office = {
-                "office_name": office['office_name']
 
-            }
             offices.append(update_office)
             return make_response(jsonify({
                 "status": 200,
                 "data": [update_office]
             }), 200)
+
+
 
 
 

@@ -58,10 +58,9 @@ class Test_Offices(unittest.TestCase):
         self.assertEqual(res.json['status'], 200)
 
 
+
     def tearDown(self):
         self.app=None
-
-
 
     if __name__ == '__main__':
         unittest.main
