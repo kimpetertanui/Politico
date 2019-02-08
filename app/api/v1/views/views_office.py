@@ -64,7 +64,7 @@ def deleteOffice(officeID):
         "status": 404,
         "error": "could not find office with ID {}".format(officeID)
     }),404)
-@v1.route('/offices/<officeID>',methods='PATCH')
+@v1.route('/offices/<officeID>',methods=['PATCH'])
 def party_update(officeID):
     for office in offices:
         if office ['officeID']==int(officeID):

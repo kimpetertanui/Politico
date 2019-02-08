@@ -6,23 +6,6 @@ from . import PoliticoTest
 
 
 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Test_parties(unittest.TestCase):
     def setUp(self):
         self.app=app

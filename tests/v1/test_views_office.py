@@ -23,7 +23,7 @@ class Test_Offices(unittest.TestCase):
         if not office_data:
             office_data = self.office_data
 
-        resp = self.client.post(path='/api/v1/parties', office_data=json.dumps(self.office_data), content_type='application/json')
+        resp = self.client.post(path='/api/v1/parties', data=json.dumps(self.office_data), content_type='application/json')
         return resp
 
     def test_getting_all_offices(self):
@@ -38,10 +38,10 @@ class Test_Offices(unittest.TestCase):
          self.assertEquals(res.status_code,200)
 
     def test_editing_a_single_office(self):
-        post = self.client.post(path='api/v1/offices', office_data=json.dumps(self.office_data), content_type='application/json')
-        id= post.json["office_data"][0]['id']
+        post = self.client.post(path='api/v1/offices', data=json.dumps(self.office_data), content_type='application/json')
+        id= post.json["data"][0]['id']
         path = '/api/v1/parties{}'.format(id)
-        response = self.client.put(path, office_data=json.dumps(self.office_update), content_type='application/json')
+        response = self.client.put(path, data=json.dumps(self.office_update), content_type='application/json')
         self.assertEqual(response.status_code, 404)
 
 
