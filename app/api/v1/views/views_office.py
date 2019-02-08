@@ -86,6 +86,7 @@ def party_update(officeID):
             "status":200,
             "data":[update_office]
         }), 200)
+       
 
 
 if __name__ == "__main__":
