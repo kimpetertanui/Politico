@@ -7,24 +7,8 @@ from . import PoliticoTest
 
 
 
-# class TestParties(PoliticoTest):
-#     def test_post(self):
-#          response = self.client.post("api/v1/parties", data=json.dumps({
-#                 "party_name": "elihu",
-#                 "hqAddress": "str",
-#                  "logoUrl":"mim"
-#             }), content_type="application/json")
-#          result = json.loads(response.decode("utf-8"))
-#          self.assertEqual(result['status'], 201)
-    # def test_wrong_post(self):
-    #     res = self.client.post("api/v1/addparty", data=json.dumps({
-    #             "name": "567890",
-    #             "slogan": "3456"
-    #         }), content_type="application/json")
-    #     result = json.loads(res.data.decode('utf-8'))
-    #     self.assertEqual(result['status'], 400)
 
-    #
+    
 
 
 
