@@ -23,7 +23,7 @@ class Test_Offices(unittest.TestCase):
         if not office_data:
             office_data = self.office_data
 
-        resp = self.client.post(path='/api/v1/parties', data=json.dumps(self.office_data), content_type='application/json')
+        resp = self.client.post(path='/api/v1/offices', data=json.dumps(self.office_data), content_type='application/json')
         return resp
 
     def test_getting_all_offices(self):
