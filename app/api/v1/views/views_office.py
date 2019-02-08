@@ -29,7 +29,7 @@ def getOffice(officeID):
 
 @v1.route("/offices", methods=['POST'])
 def addOffice():
-    json_data = request.get_json()
+    json_data = request.get_json(force=True)
 
     id = random.randint(3, 10)
     office_type = json_data["type"]
