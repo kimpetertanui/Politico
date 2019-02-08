@@ -59,11 +59,19 @@ def deleteOffice(officeID):
                 "status": 200,
                 "data": "deleted successfully"
             }), 200)
+        elif office["id"]!=int(officeID):
+            return  make_response(jsonify({
+                "status":404,
+                "error":"could not find office with ID {}".format(officeID)
+            }))
 
-    return make_response(jsonify({
-        "status": 404,
-        "error": "could not find office with ID {}".format(officeID)
-    }),404)
+
+        else:
+            return "Enter a valid office ID"
+
+
+
+
 @v1.route('/offices/<officeID>',methods=['PATCH'])
 def party_update(officeID):
     for office in offices:
@@ -86,6 +94,8 @@ def party_update(officeID):
             "status":200,
             "data":[update_office]
         }), 200)
+
+
 
 
 if __name__ == "__main__":
