@@ -71,22 +71,24 @@ def deleteOffice(officeID):
     }),404)
 @v1.route('/offices/<officeID>',methods=['PATCH'])
 def party_update(officeID):
-    print(offices)
-    print(officeID)
     for office in offices:
-        if office ['id']==int(officeID):
-            data=request.get_json()
+        if office['id'] == int(officeID):
+            data = request.get_json()
+            # new_name = data['name']
             print(data)
-            # new_name=data['name']
-            office['name']=data['name']
-
-
+            office['name'] = data['name']
             return make_response(jsonify({
-                "status":200,
-                 "data":"updated  the office with officeID {} you can stilledit it later".format(officeID)
-            }),200)
+                "status": 200,
+                "data": "updated  the party with office ID {} ".format(officeID)
+            }), 200)
+        elif office in offices:
+            return "Office Already exist"
+        else:
+            update_office = {
+                "name": office['name']
 
-            offices.append(update_office)
+            }
+            office.append(update_office)
             return make_response(jsonify({
                 "status": 200,
                 "data": [update_office]

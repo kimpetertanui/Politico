@@ -32,7 +32,7 @@ def getParty(partyID):
 @b_party.route("/parties", methods=['POST'])
 def addparty():
     json_data = request.get_json(force=True)
-    partyID = random.randint(3, 10)
+    partyID = len(parties)+1
     print("##")
     print(json_data )
     party_name = json_data["party_name"]
@@ -80,7 +80,7 @@ def party_update(partyID):
             party['party_name']=data['party_name']
             return make_response(jsonify({
                 "status":200,
-                 "data":"updated  the party with partyID {} ".format(partyID)
+                 "data":"updated  the party with party ID {} ".format(partyID)
             }),200)
         elif party in parties:
             return "Party Already exist"

@@ -28,8 +28,8 @@ class TestOffices(BaseTest):
         self.assertEqual(res.status_code, 200)
 
     def test_delete_party(self):
-        self.client.post(path='/api/v1/parties', data=self.create_office, content_type='application/json')
-        res = self.client.delete(path='/api/v1/parties/2')
+        self.client.post(path='/api/v1/parties', data=self.create_party, content_type='application/json')
+        res = self.client.delete(path='/api/v1/parties/1')
         self.assertEqual(res.status_code, 200)
         print(res)
 # import unittest
