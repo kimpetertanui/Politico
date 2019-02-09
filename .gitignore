@@ -1,5 +1,3 @@
-.vscode/
-.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -89,10 +87,9 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.env
-.venv
-.idea
-_pychache_
+.vscode/
+.idea/
+_pychache_/
 env/
 venv/
 ENV/
