@@ -16,7 +16,9 @@ def getAllOffices():
 @v1.route("/offices/<officeID>",methods=['GET'])
 ## this is a method to get a specific office
 def getOffice(officeID):
+
     for office in offices:
+        print(type(office["id"]))
         if office["id"] == int(officeID):
             return make_response(jsonify(office), 200)
 
@@ -30,7 +32,8 @@ def getOffice(officeID):
 def addOffice():
     json_data = request.get_json(force=True)
 
-    id = random.randint(3, 10)
+
+    id = len(offices)+1
     office_type = json_data["type"]
     office_name = json_data["name"]
 
@@ -41,16 +44,19 @@ def addOffice():
     
     }
 
+    print(new_office)
     offices.append(new_office)
 
     return make_response(jsonify({
-        "status": 200,
+        "status": 201,
         "data": [new_office]
-    }), 200)
+    }), 201)
 
 
 @v1.route("/offices/<officeID>", methods=['DELETE'])
 def deleteOffice(officeID):
+    # print(offices)
+    # print(type(officeID))
     for office in offices:
         if office["id"] == int(officeID):
             offices.remove(office)
@@ -64,13 +70,16 @@ def deleteOffice(officeID):
         "error": "could not find office with ID {}".format(officeID)
     }),404)
 @v1.route('/offices/<officeID>',methods=['PATCH'])
-def party_update(officeID,office_name):
+def party_update(officeID):
+    print(offices)
+    print(officeID)
     for office in offices:
-        # if office ['officeID']==int(officeID):
-        #     data=request.get_json()
-        #     new_name=data['office_name']
-        #     office['office_name']=data['office_name']
-        if not officeID or not office_name:
+        if office ['id']==int(officeID):
+            data=request.get_json()
+            print(data)
+            # new_name=data['name']
+            office['name']=data['name']
+
 
             return make_response(jsonify({
                 "status":200,

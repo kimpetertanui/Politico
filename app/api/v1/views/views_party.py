@@ -29,8 +29,6 @@ def getParty(partyID):
                 "error": "Could not find party with id {}".format(partyID)
             }), 404)
 
-
-
 @b_party.route("/parties", methods=['POST'])
 def addparty():
     json_data = request.get_json(force=True)
@@ -51,9 +49,9 @@ def addparty():
     parties.append(new_party)
 
     return make_response(jsonify({
-        "status": 200,
+        "status": 201,
         "data": [new_party]
-    }), 200)
+    }), 201)
 
 
 @b_party.route("/parties/<partyID>", methods=['DELETE'])
