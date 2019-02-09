@@ -74,7 +74,7 @@ def party_update(officeID,office_name):
 
             return make_response(jsonify({
                 "status":200,
-                 "data":"updated  the office with officeID {} ".format(officeID)
+                 "data":"updated  the office with officeID {} you can stilledit it later".format(officeID)
             }),200)
 
             offices.append(update_office)
