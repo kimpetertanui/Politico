@@ -3,3 +3,4 @@
 [![Coverage Status](https://coveralls.io/repos/github/kimpetertanui/Politico/badge.svg)](https://coveralls.io/github/kimpetertanui/Politico)
 
 [![Build Status](https://travis-ci.org/kimpetertanui/Politico.svg?branch=develop)](https://travis-ci.org/kimpetertanui/Politico)
+
