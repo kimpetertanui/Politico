@@ -31,6 +31,7 @@ class TestOffices(BaseTest):
         self.client.post(path='/api/v1/parties', data=self.create_office, content_type='application/json')
         res = self.client.delete(path='/api/v1/parties/2')
         self.assertEqual(res.status_code, 200)
+        print(res)
 # import unittest
 # import json
 # from tests.v1 import base_test

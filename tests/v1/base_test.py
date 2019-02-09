@@ -20,7 +20,7 @@ class BaseTest(unittest.TestCase):
             "partyID":1,
              "party_name":"PNU",
               "hqAddress":"Nairobi",
-               "logoUrl":"Tuko pamoja"
+               "logoUrl":"The Logo is Tuko Pamoja"
 
         })
 
