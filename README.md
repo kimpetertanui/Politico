@@ -18,7 +18,8 @@
     Politicians can run for different political offices and be voted in by the users.
     The admin can create political parties and offices.This platform enables citizens give their mandate
     to politicians running for different government offices while building trust in the process through transparency.
-    This plartform is managed by pivotal tracker board. Click<a href="https://www.pivotaltracker.com/n/projects/2241686">here</a>to view it.
+    This plartform is managed by pivotal tracker board.
+    Click<a href="https://www.pivotaltracker.com/n/projects/2241686">here</a>to view it.
 
     The site is hosted on heroku
 
@@ -48,7 +49,7 @@
     git clone: https://github.com/kimpetertanui/Politico.git
 
     cd into this folder:
-    Politico-api
+    Politico
 
     Create a virtual environment
     python3 -m venv env
@@ -101,7 +102,16 @@ GET /api/v1/offices | GET ALL government offices
  Peter Kimeli - Github-kimpetertanui
 
 ```
+##  Build With  ##
+```
+1.Flask API .
+2.Pip
 
+```
+##  License  ##
+```
+This project is licensed under the MIT License
+```
 
 
 
