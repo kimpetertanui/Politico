@@ -9,7 +9,7 @@
 
 - - - -
 
-<ceneter># POLITICO API #</center>
+# POLITICO API #
 
 
 ## Summary ##
