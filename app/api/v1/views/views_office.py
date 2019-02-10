@@ -4,9 +4,14 @@ import random
 
 v1= Blueprint('api_v1', __name__, url_prefix='/api/v1')
 
-@v1.route('/index', methods=['GET'])
-def index():
-    return 'POLITICO '
+@v1.route('/home', methods=['GET'])
+def home():
+    make_response(jsonify({
+        "status": 200,
+        "message": "Politico enables citizens give their mandate to the type of leaders they need "
+
+
+    }), 200)
 
 @v1.route("/offices",methods=['GET'])
 def getAllOffices():

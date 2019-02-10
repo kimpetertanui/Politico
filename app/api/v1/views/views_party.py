@@ -8,14 +8,19 @@ b_party= Blueprint('parties', __name__, url_prefix='/api/v1')
 
 @b_party.route('/index', methods=['GET'])
 def index():
-    return 'POLITICO'
+    return make_response(jsonify({
+        "status":200,
+        "message":"Politico nables citizens give their mandate to Leaders "
+
+    }),200)
+
 
 
 @b_party.route("/parties",methods=['GET'])
 def getAllParties():
     return make_response(jsonify(
         {"status":200},
-        {"data":parties}))
+        {"data":parties}),200)
 
 
 @b_party.route("/parties/<partyID>",methods=['GET'])

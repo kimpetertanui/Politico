@@ -34,10 +34,16 @@ class TestOffices(BaseTest):
         self.assertEqual(res.status_code, 200)
         print(res)
 
-    # def get_missing_office(self):
-    #     self.client.post(path='/api/v1/offices', data=self.create_office, content_type='application/json')
-    #     res = self.client.get(path='/api/v1/offices/kfjfhfhdfh')
-    #     self.assertEqual(res.status_code, 400)
+    def get_missing_office(self):
+        self.client.post(path='/api/v1/offices', data=self.create_office, content_type='application/json')
+        res = self.client.get(path='/api/v1/offices/council')
+        self.assertEqual(res.status_code, 400)
+    #
+    # def test_get_office_home(self):
+    #     self.client.post(path='/api/v1/home', data=self.create_party, content_type='application/json')
+    #     res = self.client.get(path='/api/v1/home')
+    #     self.assertEqual(res.status_code, 200)
+
 
     #
     # def test_get_missing_office(self):
@@ -52,10 +58,9 @@ class TestOffices(BaseTest):
     #     self.assertEqual(response.status_code,200)
     #
     # def test_getting_single_office(self):
-    #      path = '/api/v1/offices'
-    #
-    #      res=self.client.get(path='api/v1/offices')
-    #      self.assertEquals(res.status_code,200)
+    #     self.client.post(path='/api/v1/offices', data=self.create_office, content_type='application/json')
+    #     res = self.client.get(path='/api/v1/offices/council')
+    #     self.assertEqual(res.status_code, 200)
     #
     # def test_editing_a_single_office(self):
     #     post = self.client.post(path='api/v1/offices', data=json.dumps(self.office_data), content_type='application/json')
