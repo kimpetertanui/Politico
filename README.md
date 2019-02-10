@@ -43,7 +43,7 @@
     2.Git
     3.Python3
 
-## Running it on machine##
+## Running it on machine ##
 ```
     Clone this repository to your computer:
     git clone: https://github.com/kimpetertanui/Politico.git
