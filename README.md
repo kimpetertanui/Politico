@@ -22,6 +22,20 @@
 
     The site is hosted on heroku
 
+## Getting Started ##
+
+  1.Clone the repository by doing: git clone https://github.com/mimipeshy/PoliticoV1.git
+
+  2.Create a virtual environment: virtualenv env
+
+  3.Activate the virtual environment: source venv/bin/activate on Linux/Mac or source venv/Scripts/activate on windows.
+
+  *Install the requirements : pip install -r requirements.txt
+
+## How to run tests ##
+   Use pytest to run: pytest --cov=app
+
+## Pre-requisites ##
 
 
 ### This List below shows the endpoints that enable one to: ###
@@ -30,12 +44,12 @@
     2.Create a political party
     3.Fetch a specific political party
     4.Fetch all political parties
-    .Edit a specific political party
-    Delete a specific political party
-    Create a political office
-    Fetch all political offices
-    Create candidate for a specific office election
-    Vote for a candidate for a specific office election
+    5.Edit a specific political party
+    6.Delete a specific political party
+    7.Create a political office
+    8.Fetch all political offices
+    9.Create candidate for a specific office election
+    10.Vote for a candidate for a specific office election
 
 #### Heading 4 ####
 
