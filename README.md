@@ -93,13 +93,11 @@ GET /api/v1/offices/int:officeID | GET ONE government office
 GET /api/v1/offices | GET ALL government offices
 
 
-
+```
 ## Author ##
-<details>
-           <summary>Title 1</summary>
-           <p>Peter Kimeli - Github-kimpetertanui</p>
-         </details
+ <p>Peter Kimeli - Github-kimpetertanui</p>
 
+```
 
 
 
