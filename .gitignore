@@ -1,8 +1,8 @@
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+# Created by https://www.gitignore.io/api/python
+# Edit at https://www.gitignore.io/?templates=python
 
+### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -25,6 +25,8 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -43,6 +45,7 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
@@ -77,6 +80,10 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# IPython
+profile_default/
+ipython_config.py
+
 # pyenv
 .python-version
 
@@ -87,9 +94,8 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.vscode/
-.idea/
-_pychache_/
+.env
+.venv
 env/
 venv/
 ENV/
@@ -108,3 +114,13 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+### Python Patch ###
+.venv/
+
+# End of https://www.gitignore.io/api/python
