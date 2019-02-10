@@ -7,9 +7,9 @@
 
 
 
-                                      - - - -
+- - - -
 
-                                      # POLITICO API #
+# POLITICO API #
 
 
 ## Summary ##
@@ -24,7 +24,7 @@
 
 ## Getting Started ##
 
-  1.Clone the repository by doing: git clone https://github.com/mimipeshy/PoliticoV1.git
+  1.Clone the repository by doing: git clone  https://github.com/kimpetertanui/Politico.git
 
   2.Create a virtual environment: virtualenv env
 
@@ -40,7 +40,7 @@
     2.Git
     3.Python3
 
- ## Testing##
+ ## Running it on machine##
     Clone this repository to your computer:
     git clone: https://github.com/kimpetertanui/Politico.git
 
@@ -79,9 +79,12 @@
     9.Create candidate for a specific office election
     10.Vote for a candidate for a specific office election
 
-#### Heading 4 ####
+## Use Postman to test following working Endpoinsts  ##
 
-    Markup :  #### Heading 4 ####
+            ENDPOINT  | FUNCTIONALITY
+        ------------- | -------------
+        Content Cell  | Content Cell
+        Content Cell  | Content Cell
 
 
 Common text
