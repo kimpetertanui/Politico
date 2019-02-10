@@ -84,7 +84,7 @@
             ENDPOINT  | FUNCTIONALITY
         ------------- | -------------
         POST /api/v1/parties  | CREATE political party
-        CREATE political parties  | GET ALL political parties
+        GET political parties  | GET ALL political parties
         GET /api/v1/parties/int:partyID| GET ONE political party
         DELETE /api/v1/parties|DELETE ONE political party
         PATCH /api/v1/parties/int:partyID|UPDATE ONE political party
@@ -94,8 +94,14 @@
 
    ENDPOINT  |    ENDPOINT
 ------------- | -------------
-POST /api/v1/parties   | GET ALL political parties
- CREATE political parties  | Content Cell
+POST /api/v1/parties   | CREATE political party
+GET political parties  | GET ALL political parties
+GET /api/v1/parties/int:partyID | GET ONE political party
+DELETE /api/v1/parties | DELETE ONE political party
+PATCH /api/v1/parties/int:partyID|UPDATE ONE political party
+POST /api/v1/offices  | CREATE government office
+GET /api/v1/offices/int:officeID | GET ONE government office
+GET /api/v1/offices | GET ALL government offices
 
 ```
     ENDPOINT  |    ENDPOINT
