@@ -15,7 +15,7 @@
 ## Summary ##
 
     Politico API is a backend platform that implements the voting process.
-     Politicians can run for different political offices and be voted in by the users.
+    Politicians can run for different political offices and be voted in by the users.
     The admin can create political parties and offices.
 
 ### Heading 3 ###
