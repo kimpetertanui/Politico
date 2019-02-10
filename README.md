@@ -43,7 +43,7 @@
     1.Postman
     2.Git
     3.Python3
-    ```
+  ```
 
 
  ## Running it on machine##
