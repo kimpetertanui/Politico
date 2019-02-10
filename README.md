@@ -4,4 +4,4 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/kimpetertanui/Politico/badge.png?branch=develop)](https://coveralls.io/github/kimpetertanui/Politico?branch=develop)
 
-POLITICO API
+                   POLITICO API
