@@ -9,7 +9,7 @@
 
 - - - -
 
-# POLITICO API #
+                                        # POLITICO API #
 
 
 ## Summary ##
@@ -30,12 +30,40 @@
 
   3.Activate the virtual environment: source venv/bin/activate on Linux/Mac or source venv/Scripts/activate on windows.
 
-  *Install the requirements : pip install -r requirements.txt
+  4.Install the requirements : pip install -r requirements.txt
 
 ## How to run tests ##
    Use pytest to run: pytest --cov=app
 
 ## Pre-requisites ##
+    1.Postman
+    2.Git
+    3.Python3
+
+ ## Testing##
+    Clone this repository to your computer:
+    git clone: https://github.com/kimpetertanui/Politico.git
+
+    cd into this folder:
+    Politico-api
+
+    Create a virtual environment
+    python3 -m venv env
+
+    Activate the virtual environment
+    source venv/bin/activate
+
+    Switch to 'develop' branch
+    git checkout develop
+
+    Install requirements
+    pip3 install -r requirements.txt
+
+    Run app
+    python3 run.py
+
+    Run tests
+    pytest
 
 
 ### This List below shows the endpoints that enable one to: ###
