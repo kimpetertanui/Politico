@@ -79,22 +79,9 @@
     9.Create candidate for a specific office election
     10.Vote for a candidate for a specific office election
 
-## Use Postman to test following working Endpoinsts  ##
 
-            ENDPOINT  | FUNCTIONALITY
-        ------------- | -------------
-        POST /api/v1/parties  | CREATE political party
-        GET political parties  | GET ALL political parties
-        GET /api/v1/parties/int:partyID| GET ONE political party
-        DELETE /api/v1/parties|DELETE ONE political party
-        PATCH /api/v1/parties/int:partyID|UPDATE ONE political party
-        POST /api/v1/offices|CREATE government office
-        GET /api/v1/offices/int:officeID|GET ONE government office
-        GET /api/v1/offices|GET ALL government offices
-
-
-## Endpoints ##
-   ENDPOINT  |    ENDPOINT
+## Use Postman to test following working Endpoinsts ##
+   ENDPOINT  |    FUNCTIONALITY
 ------------- | -------------
 POST /api/v1/parties   | CREATE political party
 GET political parties  | GET ALL political parties
@@ -104,138 +91,12 @@ PATCH /api/v1/parties/int:partyID|UPDATE ONE political party
 POST /api/v1/offices  | CREATE government office
 GET /api/v1/offices/int:officeID | GET ONE government office
 GET /api/v1/offices | GET ALL government offices
- 
-```
-    ENDPOINT  |    ENDPOINT
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
-```
 
-`code()`
 
-    Markup :  `code()`
 
-```javascript
-    var specificLanguage_code =
-    {
-        "data": {
-            "lookedUpPlatform": 1,
-            "query": "Kasabian+Test+Transmission",
-            "lookedUpItem": {
-                "name": "Test Transmission",
-                "artist": "Kasabian",
-                "album": "Kasabian",
-                "picture": null,
-                "link": "http://open.spotify.com/track/5jhJur5n4fasblLSCOcrTp"
-            }
-        }
-    }
-```
 
-    Markup : ```javascript
-             ```
+  
 
-* Bullet list
-    * Nested bullet
-        * Sub-nested bullet etc
-* Bullet list item 2
 
-~~~
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
-~~~
 
-1. A numbered list
-    1. A nested numbered list
-    2. Which is numbered
-2. Which is numbered
-
-~~~
- Markup : 1. A numbered list
-              1. A nested numbered list
-              2. Which is numbered
-          2. Which is numbered
-~~~
-
-- [ ] An uncompleted task
-- [x] A completed task
-
-~~~
- Markup : - [ ] An uncompleted task
-          - [x] A completed task
-~~~
-
-> Blockquote
->> Nested blockquote
-
-    Markup :  > Blockquote
-              >> Nested Blockquote
-
-_Horizontal line :_
-- - - -
-
-    Markup :  - - - -
-
-_Image with alt :_
-
-![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
-
-    Markup : ![picture alt](http://www.brightlightpictures.com/assets/images/portfolio/thethaw_header.jpg "Title is optional")
-
-Foldable text:
-
-<details>
-  <summary>Title 1</summary>
-  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-</details>
-<details>
-  <summary>Title 2</summary>
-  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
-</details>
-
-    Markup : <details>
-               <summary>Title 1</summary>
-               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
-             </details>
-
-```html
-<h3>HTML</h3>
-<p> Some HTML code here </p>
-```
-
-Hotkey:
-
-<kbd>⌘F</kbd>
-
-<kbd>⇧⌘F</kbd>
-
-    Markup : <kbd>⌘F</kbd>
-
-Hotkey list:
-
-| Key | Symbol |
-| --- | --- |
-| Option | ⌥ |
-| Control | ⌃ |
-| Command | ⌘ |
-| Shift | ⇧ |
-| Caps Lock | ⇪ |
-| Tab | ⇥ |
-| Esc | ⎋ |
-| Power | ⌽ |
-| Return | ↩ |
-| Delete | ⌫ |
-| Up | ↑ |
-| Down | ↓ |
-| Left | ← |
-| Right | → |
-
-Emoji:
-
-:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
-
-    Markup : Code appears between colons :EMOJICODE:
 
