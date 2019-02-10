@@ -23,7 +23,7 @@
     The site is hosted on heroku
 
 ## Getting Started ##
-
+```
   1.Clone the repository by doing: git clone  https://github.com/kimpetertanui/Politico.git
 
   2.Create a virtual environment: virtualenv env
@@ -31,6 +31,7 @@
   3.Activate the virtual environment: source venv/bin/activate on Linux/Mac or source venv/Scripts/activate on windows.
 
   4.Install the requirements : pip install -r requirements.txt
+```
 
 ## How to run tests ##
 ```
