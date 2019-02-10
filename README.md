@@ -18,7 +18,7 @@
     Politicians can run for different political offices and be voted in by the users.
     The admin can create political parties and offices.This platform enables citizens give their mandate
     to politicians running for different government offices while building trust in the process through transparency.
-    This plartform is managed by pivotal tracker board. Click [link](https://www.pivotaltracker.com/n/projects/2241686) to view it.
+    This plartform is managed by pivotal tracker board. Click<a href="https://www.pivotaltracker.com/n/projects/2241686">here</a>to view it.
 
 ### Heading 3 ###
 
