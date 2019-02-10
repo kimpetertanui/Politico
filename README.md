@@ -123,7 +123,7 @@ ___Strong emphasized text___
 
 Table, like this one :
 
-First Header  | Second Header
+   ENDPOINT  |    ENDPOINT
 ------------- | -------------
 Content Cell  | Content Cell
 Content Cell  | Content Cell
