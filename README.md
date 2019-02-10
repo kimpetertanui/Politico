@@ -92,10 +92,10 @@ POST /api/v1/offices  | CREATE government office
 GET /api/v1/offices/int:officeID | GET ONE government office
 GET /api/v1/offices | GET ALL government offices
 
-
+##  Author  ##
 ```
-## Author ##
- <p>Peter Kimeli - Github-kimpetertanui</p>
+
+ Peter Kimeli - Github-kimpetertanui
 
 ```
 
