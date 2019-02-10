@@ -91,10 +91,8 @@
         POST /api/v1/offices|CREATE government office
         GET /api/v1/offices/int:officeID|GET ONE government office
         GET /api/v1/offices|GET ALL government offices
-
-##Endpoints ##
 ```
-
+##Endpoints ##
    ENDPOINT  |    ENDPOINT
 ------------- | -------------
 POST /api/v1/parties   | CREATE political party
