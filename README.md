@@ -3,4 +3,4 @@
 [![Build Status](https://travis-ci.org/kimpetertanui/Politico.png?branch=develop)](https://travis-ci.org/kimpetertanui/Politico)
 
 [![Coverage Status](https://coveralls.io/repos/github/kimpetertanui/Politico/badge.png?branch=develop)](https://coveralls.io/github/kimpetertanui/Politico?branch=develop)
-[![Badges](http://img.shields.io/:badges-7/7-ff6799.svg)](https://github.com/badges/badgerbadgerbadger)
+r)
