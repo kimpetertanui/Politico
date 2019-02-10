@@ -82,7 +82,7 @@
     10.Vote for a candidate for a specific office election
 
 ## Use Postman to test following working Endpoinsts ##
-```
+
    ENDPOINT  |    FUNCTIONALITY
 ------------- | -------------
 POST /api/v1/parties   | CREATE political party
@@ -93,7 +93,7 @@ PATCH /api/v1/parties/int:partyID|UPDATE ONE political party
 POST /api/v1/offices  | CREATE government office
 GET /api/v1/offices/int:officeID | GET ONE government office
 GET /api/v1/offices | GET ALL government offices
-```
+
 ##  Author  ##
 ```
 
