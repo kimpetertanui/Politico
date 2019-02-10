@@ -6,7 +6,6 @@
 
 
  POLITICO API
- Markdown Cheatsheet
 ===================
 
 - - - -
