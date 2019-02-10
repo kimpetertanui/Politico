@@ -92,41 +92,10 @@
         GET /api/v1/offices/int:officeID|GET ONE government office
         GET /api/v1/offices|GET ALL government offices
 
- ##Heroku host##
-        peter
-
-
-
-Common text
-
-    Markup :  Common text
-
-_Emphasized text_
-
-    Markup :  _Emphasized text_ or *Emphasized text*
-
-~~Strikethrough text~~
-
-    Markup :  ~~Strikethrough text~~
-
-__Strong text__
-
-    Markup :  __Strong text__ or **Strong text**
-
-___Strong emphasized text___
-
-    Markup :  ___Strong emphasized text___ or ***Strong emphasized text***
-
-[Named Link](http://www.google.fr/) and http://www.google.fr/ or <http://example.com/>
-
-    Markup :  [Named Link](http://www.google.fr/) and http://www.google.fr/ or <http://example.com/>
-
-Table, like this one :
-
    ENDPOINT  |    ENDPOINT
 ------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+POST /api/v1/parties   | GET ALL political parties
+ CREATE political parties  | Content Cell
 
 ```
     ENDPOINT  |    ENDPOINT
