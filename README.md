@@ -30,7 +30,7 @@
     2.Create a political party
     3.Fetch a specific political party
     4.Fetch all political parties
-    Edit a specific political party
+    .Edit a specific political party
     Delete a specific political party
     Create a political office
     Fetch all political offices
