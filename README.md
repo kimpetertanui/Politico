@@ -114,7 +114,7 @@ This project is licensed under the MIT License
 ```
 
 
-##  Acknowledgmentse  ##
+##  Acknowledgments  ##
 ```
 1.Andela workshops.
 2.Andela Bootcamp Team 12 members.
