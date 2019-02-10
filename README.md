@@ -20,9 +20,22 @@
     to politicians running for different government offices while building trust in the process through transparency.
     This plartform is managed by pivotal tracker board. Click<a href="https://www.pivotaltracker.com/n/projects/2241686">here</a>to view it.
 
-### Heading 3 ###
+    The site is hosted on heroku
 
-    Markup :  ### Heading 3 ###
+
+
+### This List below shows the endpoints that enable one to: ###
+
+    1.Create account and log in
+    2.Create a political party
+    3.Fetch a specific political party
+    4.Fetch all political parties
+    Edit a specific political party
+    Delete a specific political party
+    Create a political office
+    Fetch all political offices
+    Create candidate for a specific office election
+    Vote for a candidate for a specific office election
 
 #### Heading 4 ####
 
