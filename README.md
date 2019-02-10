@@ -33,14 +33,20 @@
   4.Install the requirements : pip install -r requirements.txt
 
 ## How to run tests ##
+```
    Use pytest to run: pytest --cov=app
+```
 
 ## Pre-requisites ##
+```
     1.Postman
     2.Git
     3.Python3
+    ```
+
 
  ## Running it on machine##
+ ```
     Clone this repository to your computer:
     git clone: https://github.com/kimpetertanui/Politico.git
 
@@ -65,8 +71,12 @@
     Run tests
     pytest
 
+    ```
+
+
 
 ### This List below shows the endpoints that enable one to: ###
+```
 
     1.Create account and log in
     2.Create a political party
@@ -78,6 +88,7 @@
     8.Fetch all political offices
     9.Create candidate for a specific office election
     10.Vote for a candidate for a specific office election
+  ```
 
 
 ## Use Postman to test following working Endpoinsts ##
