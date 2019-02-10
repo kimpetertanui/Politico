@@ -83,8 +83,18 @@
 
             ENDPOINT  | FUNCTIONALITY
         ------------- | -------------
-        Content Cell  | Content Cell
-        Content Cell  | Content Cell
+        POST /api/v1/parties  | CREATE political party
+        CREATE political parties  | GET ALL political parties
+        GET /api/v1/parties/int:partyID| GET ONE political party
+        DELETE /api/v1/parties|DELETE ONE political party
+        PATCH /api/v1/parties/int:partyID|UPDATE ONE political party
+        POST /api/v1/offices|CREATE government office
+        GET /api/v1/offices/int:officeID|GET ONE government office
+        GET /api/v1/offices|GET ALL government offices
+
+ ##Heroku host##
+        peter
+
 
 
 Common text
@@ -119,7 +129,7 @@ Content Cell  | Content Cell
 Content Cell  | Content Cell
 
 ```
-First Header  | Second Header
+    ENDPOINT  |    ENDPOINT
 ------------- | -------------
 Content Cell  | Content Cell
 Content Cell  | Content Cell
