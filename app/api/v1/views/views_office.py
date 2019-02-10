@@ -5,7 +5,7 @@ import random
 v1= Blueprint('api_v1', __name__, url_prefix='/api/v1')
 
 @v1.route('/index', methods=['GET'])
-def hello():
+def index():
     return 'POLITICO '
 
 @v1.route("/offices",methods=['GET'])
@@ -69,30 +69,30 @@ def deleteOffice(officeID):
         "status": 404,
         "error": "could not find office with ID {}".format(officeID)
     }),404)
-@v1.route('/offices/<officeID>',methods=['PATCH'])
-def party_update(officeID):
-    for office in offices:
-        if office['id'] == int(officeID):
-            data = request.get_json()
-            # new_name = data['name']
-            print(data)
-            office['name'] = data['name']
-            return make_response(jsonify({
-                "status": 200,
-                "data": "updated  the party with office ID {} ".format(officeID)
-            }), 200)
-        elif office in offices:
-            return "Office Already exist"
-        else:
-            update_office = {
-                "name": office['name']
-
-            }
-            office.append(update_office)
-            return make_response(jsonify({
-                "status": 200,
-                "data": [update_office]
-            }), 200)
+# @v1.route('/offices/<officeID>',methods=['PATCH'])
+# def party_update(officeID):
+#     for office in offices:
+#         if office['id'] == int(officeID):
+#             data = request.get_json()
+#             # new_name = data['name']
+#             print(data)
+#             office['name'] = data['name']
+#             return make_response(jsonify({
+#                 "status": 200,
+#                 "data": "updated  the party with office ID {} ".format(officeID)
+#             }), 200)
+#         elif office in offices:
+#             return "Office Already exist"
+#         else:
+#             update_office = {
+#                 "name": office['name']
+#
+#             }
+#             office.append(update_office)
+#             return make_response(jsonify({
+#                 "status": 200,
+#                 "data": [update_office]
+#             }), 200)
 
 
 

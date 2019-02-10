@@ -7,7 +7,7 @@ b_party= Blueprint('parties', __name__, url_prefix='/api/v1')
 
 
 @b_party.route('/index', methods=['GET'])
-def hello():
+def index():
     return 'POLITICO'
 
 
