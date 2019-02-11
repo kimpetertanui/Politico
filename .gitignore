@@ -1,5 +1,5 @@
 
-### Python ###
+### Python ignore ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
 .vscode/_
