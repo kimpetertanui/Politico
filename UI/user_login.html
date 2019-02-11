@@ -29,25 +29,26 @@
   	<h2>Login</h2>
     </div>
 	
-  <form method="POST" action="vote.html" >
-  	
-  	
-  	<div class="input-group">
-  	  <label>National ID</label>
-  	  <input type="email" name="email">
-  	</div>
-  	<div class="input-group">
-  	  <label>Password</label>
-  	  <input type="password" name="password">
-  	</div>
+  <div class="party">
+
+  <form action="vote.html">
+    <h3>Create a Political Party</h3><br>
+    <label for="pname">Party Name:</label>
+    <input type="text" id="pname" name="partyname" placeholder="Enter Party name..">
+
+    <label for="lname">Party Leader:</label>
+    <input type="text" id="lname" name="leadername" placeholder="Enter Party Leader name..">
+
+    <label for="motto">Party Motto:</label>
+    <input type="text" id="motto" name="motto" placeholder="Enter Party Motto..">
+
+     <label style="width: 900px" for="Party-image">Party Logo:</label><br>
+     <input class="plogo" type="file" name="logo" id="logo">
   
-  	<div class="input-group">
-  	  <button type="submit" class="btn" name="login">Login</button>
-  	</div>
-  	<p>
-  		Don't have  an account? <a href="sign_up.html">Sign up</a>
-  	</p>
+    <input type="submit" value="Submit">
   </form>
+  
+</div>
 
 </body>
 <br><br>
