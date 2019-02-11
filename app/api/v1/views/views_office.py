@@ -1,7 +1,5 @@
 from flask import make_response, jsonify, Blueprint,request
 from app.api.v1.models.models_office import offices
-import random
-
 v1= Blueprint('api_v1', __name__, url_prefix='/api/v1')
 
 @v1.route('/home', methods=['GET'])
