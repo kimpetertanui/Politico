@@ -26,23 +26,25 @@
 	</div>
 
 	
- <div class="party">
-
-  <form action="vote.html">
-    <h3>Login to Vote</h3><br>
-    <label for="pname">National ID:</label>
-    <input type="text" id="pname" name="partyname" placeholder="Enter ID..">
-
-    <label for="lname">Password:</label><br>
-    <input type="password" id="lname" name="leadername" placeholder="Enter password.." style="width:340;">
-
-
- 
+ <form method="POST" action="vote.html" >
+  	
+  	
+  	<div class="input-group">
+  	  <label>National ID</label>
+  	  <input type="text" name="text" style="width: 350px;">
+  	</div>
+  	<div class="input-group">
+  	  <label>Password</label>
+  	  <input  type="password" name="password">
+  	</div>
   
-    <input type="submit" value="Submit">
+  	<div class="input-group">
+  	  <button type="submit" class="btn" name="login">Login</button>
+  	</div>
+  	<p>
+  		Don't have  an account? <a href="sign_up.html">Sign up</a>
+  	</p>
   </form>
-  
-</div>
 
 </body>
 <br><br>
