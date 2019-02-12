@@ -17,7 +17,7 @@ class BaseTest(unittest.TestCase):
 
         self.create_party=json.dumps({
 
-            "partyID":1,
+            "id":1,
              "party_name":"PNU",
               "hqAddress":"Nairobi",
                "logoUrl":"The Logo is Tuko Pamoja"
