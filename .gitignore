@@ -1,11 +1,11 @@
 
 # Python cache
-__pycache__
+*__pycache__
 .pyc
 
 ### Python ignore ###
 # Byte-compiled / optimized / DLL files
-__pycache__/
+*__pycache__/
 .vscode/
 *.py[cod]
 *$py.class
