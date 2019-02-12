@@ -100,7 +100,7 @@ def party_update(partyID):
                  "data":"updated  the party with party ID {} ".format(partyID)
             }),200)
         elif party in parties:
-            return "Party Already exist plaese enter another name and post"
+            return "Party Already exist"
         else:
             update_party = {
                 "party_name": party['party_name']
