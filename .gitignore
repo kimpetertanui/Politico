@@ -4,6 +4,11 @@ __pycache__/
 *$py.class
 
 .idea/
+app/api/v1/models/__pycache__/models_office.cpython-37.pyc
+app/api/v1/models/__pycache__/models_party.cpython-37.pyc
+
+app/api/v1/views/__pycache__/views_party.cpython-37.pyc
+
 # C extensions
 *.so
 
