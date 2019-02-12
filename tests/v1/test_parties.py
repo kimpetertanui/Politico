@@ -36,8 +36,9 @@ class TestOffices(BaseTest):
         res = self.client.get(path='/api/v1/index')
         self.assertEqual(res.status_code, 200)
 
+        print(self.client.post)
 
-        print(res)
+
 # import unittest
 # import json
 # from tests.v1 import base_test
