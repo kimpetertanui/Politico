@@ -32,12 +32,12 @@ def getParty(partyID):
 
             if party["id"] == id:
                 return make_response(jsonify({
-                    "status": "200",
+                    "status": 200,
                     "data": party
-                }))
+                }),200)
 
         return make_response(jsonify({
-            "code": 404,
+            "status": 404,
             "message": "Could not find party with id {} kindly check it again".format(partyID)
         }), 404)
     except:
