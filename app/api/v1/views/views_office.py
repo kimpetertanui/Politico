@@ -8,7 +8,7 @@ import json
 def home():
     make_response(jsonify({
         "status": 200,
-        "message": "Politico enable citizens give their mandate to the type of leaders they need "
+        "message": "Politico enables citizens give their mandate to the type of leaders they need "
 
 
     }), 200)
