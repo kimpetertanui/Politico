@@ -7,95 +7,110 @@ b_party= Blueprint('parties', __name__, url_prefix='/api/v1')
 
 
 @b_party.route('/index', methods=['GET'])
-def hello():
-    return 'POLITICO'
+def index():
+    return make_response(jsonify({
+        "status":200,
+        "message":"Politico nables citizens give their mandate to Leaders "
+
+    }),200)
+
 
 
 @b_party.route("/parties",methods=['GET'])
 def getAllParties():
     return make_response(jsonify(
         {"status":200},
-        {"data":parties}))
+        {"data":parties}),200)
 
 
 @b_party.route("/parties/<partyID>",methods=['GET'])
 def getParty(partyID):
     for party in parties:
-        if partyID == partyID:
-            return make_response(jsonify(party), 200)
-        else:
+        print(type(party["id"]))
+        if party["id"] == int(partyID):
             return make_response(jsonify({
-                "status": 404,
-                "error": "Could not find party with id {}".format(partyID)
-            }), 404)
+                "status":"200",
+                "data":party
+            }))
 
-
+    return make_response(jsonify({
+        "code": 404,
+        "message": "Could not find party with id {} kindly check it again".format(partyID)
+    }), 404)
 
 @b_party.route("/parties", methods=['POST'])
 def addparty():
+
+
     json_data = request.get_json(force=True)
-    partyID = random.randint(3, 10)
-    print("##")
-    print(json_data )
-    party_name = json_data["party_name"]
-    hqAddress = json_data["hqAddress"]
-    logoUrl=json_data["logoUrl"]
+    id = len(parties)+1
+    if json_data:
+        print("##")
+        print(json_data )
+        party_name = json_data["party_name"]
+        hqAddress = json_data["hqAddress"]
+        logoUrl=json_data["logoUrl"]
 
-    new_party = {
-        "partyID":partyID,
-        "party_name":party_name,
-        "hqAddress":hqAddress,
-        "logoUrl":logoUrl,
-    }
+        new_party = {
+            "id":id,
+            "party_name":party_name,
+            "hqAddress":hqAddress,
+            "logoUrl":logoUrl,
+        }
 
-    parties.append(new_party)
+        parties.append(new_party)
 
-    return make_response(jsonify({
-        "status": 200,
-        "data": [new_party]
-    }), 200)
+        return make_response(jsonify({
+            "status": 201,
+            "data": [new_party]
+        }), 201)
+    else:
+        return make_response(jsonify({
+            "status":400,
+            "message":"No data found"
+        }))
 
 
 @b_party.route("/parties/<partyID>", methods=['DELETE'])
 def deleteParty(partyID):
     for party in parties:
-        if party["partyID"] == int(partyID):
+        if party["id"]==int(partyID):
             parties.remove(party)
             return make_response(jsonify({
                 "status": 200,
                 "data": "deleted successfully"
             }), 200)
-
-    return make_response(jsonify({
-        "status": 404,
-        "error": "could not find party with ID {}".format(partyID)
-    }), 404)
-
-
+        elif not party :
+            return "Please enter party ID to delete"
+        else:
+            return make_response(jsonify({
+                "status": 404,
+                "msg": "could not find party with ID {}".format(partyID)
+            }), 404)
 
 @b_party.route('parties/<partyID>',methods=['PATCH'])
 def party_update(partyID):
     for party in parties:
-        if party ['partyID']==int(partyID):
+        if party ['id']==int(partyID):
             data=request.get_json()
             new_name=data['party_name']
             party['party_name']=data['party_name']
-
-
             return make_response(jsonify({
                 "status":200,
-                 "data":"updated  the party with partyID {} ".format(partyID)
+                 "data":"updated  the party with party ID {} ".format(partyID)
             }),200)
-        update_party={
-            "party_name":party['party_name']
+        elif party in parties:
+            return "Party Already exist"
+        else:
+            update_party = {
+                "party_name": party['party_name']
 
-        }
-        parties.append(update_party)
-        return make_response(jsonify({
-            "status":200,
-            "data":[update_party]
-        }), 200)
-
+            }
+            parties.append(update_party)
+            return make_response(jsonify({
+                "status": 200,
+                "data": [update_party]
+            }), 200)
 
 
 

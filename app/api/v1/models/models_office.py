@@ -1,7 +1,7 @@
 offices = []
 class Offices:
     def __init__(self,id,type,name):
-        self.id=id
+        self.id=len(offices)+1
         self.type=type
         self.name=name
 
@@ -18,4 +18,4 @@ class Offices:
         return offices.append(office)
 
     def welcome(self):
-        return "Welcome admin"
+        return "Welcome user"
