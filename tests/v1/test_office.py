@@ -36,7 +36,7 @@ class TestOffices(BaseTest):
 
     def get_missing_office(self):
         self.client.post(path='/api/v1/offices', data=self.create_office, content_type='application/json')
-        res = self.client.get(path='/api/v1/offices/3')
+        res = self.client.get(path='/api/v1/offices/council')
         self.assertEqual(res.status_code, 400)
     #
     # def test_get_office_home(self):
