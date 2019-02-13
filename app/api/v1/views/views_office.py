@@ -1,6 +1,8 @@
 from flask import make_response, jsonify, Blueprint,request
 from app.api.v1.models.models_office import offices
 v1= Blueprint('api_v1', __name__, url_prefix='/api/v1')
+import ast
+import json
 
 @v1.route('/home', methods=['GET'])
 def home():
@@ -19,21 +21,29 @@ def getAllOffices():
 @v1.route("/offices/<officeID>",methods=['GET'])
 ## this is a method to get a specific office
 def getOffice(officeID):
+    try:
+        for office in offices:
+            print(type(office["id"]))
+            if office["id"] == int(officeID):
+                return make_response(jsonify(office), 200)
 
-    for office in offices:
-        print(type(office["id"]))
-        if office["id"] == int(officeID):
-            return make_response(jsonify(office), 200)
+        return make_response(jsonify({
+            "code": 404,
+            "message": "Could not find office with id {} kindly check it again".format(officeID)
+        }), 404)
+    except:
+        return jsonify({"status": 400}, {"message": "You have entered invalid office ID"})
 
-    return make_response(jsonify({
-        "code": 404,
-        "message": "Could not find office with id {} kindly check it again".format(officeID)
-    }), 404)
+
 
 
 @v1.route("/offices", methods=['POST'])
 def addOffice():
     json_data = request.get_json(force=True)
+    data=json.dumps(json_data)
+    datadict=ast.literal_eval(data)
+    print (type(datadict))
+    print(datadict)
 
 
     id = len(offices)+1

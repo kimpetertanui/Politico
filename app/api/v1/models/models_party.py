@@ -1,3 +1,4 @@
+from flask import Flask,jsonify,request,make_response
 parties=[]
 
 class Parties:
@@ -16,7 +17,10 @@ class Parties:
             "logoUrl":self.logoUrl,
         }
 
-        return parties.append(party)
+        return  make_response(jsonify({
+            "satus":201,
+            "message":"created successfully"
+        }),201)
 
     # def getParty(self, id):
     #     for party in parties:
