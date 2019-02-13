@@ -25,18 +25,24 @@ def getAllParties():
 
 @b_party.route("/parties/<partyID>",methods=['GET'])
 def getParty(partyID):
-    for party in parties:
-        print(type(party["id"]))
-        if party["id"] == int(partyID):
-            return make_response(jsonify({
-                "status":"200",
-                "data":party
-            }))
+    try:
+        id=int(partyID)
+        for party in parties:
+            print(type(party["id"]))
 
-    return make_response(jsonify({
-        "code": 404,
-        "message": "Could not find party with id {} kindly check it again".format(partyID)
-    }), 404)
+            if party["id"] == id:
+                return make_response(jsonify({
+                    "status": "200",
+                    "data": party
+                }))
+
+        return make_response(jsonify({
+            "code": 404,
+            "message": "Could not find party with id {} kindly check it again".format(partyID)
+        }), 404)
+    except:
+        return jsonify({"message":"enter valid id"})
+
 
 @b_party.route("/parties", methods=['POST'])
 def addparty():
