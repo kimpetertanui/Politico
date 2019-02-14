@@ -9,7 +9,7 @@ class Candidates:
 
 ## creating a candidate
 
-    def create_candiate(self):
+    def create_candidate(self):
         new_candidate={
             "id":self.id,
             "officee":self.officee,
