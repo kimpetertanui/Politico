@@ -19,7 +19,7 @@ def create_tables():
     for query in queries:
         curr.execute(query)
     conn.commit()
-
+##
 def tables():
     user = """CREATE TABLE IF NOT EXISTS users (
         id serial PRIMARY KEY NOT NULL,
@@ -39,11 +39,13 @@ def tables():
             hqAddress character varying(50) NOT NULL,
             logoUrl character varying(50) NOT NULL ,
         )"""
+
     office= """CREATE TABLE IF NOT EXISTS office (
                 id serial PRIMARY KEY NOT NULL,
                 office_type character varying(50) NOT NULL,
                 office_name character varying(50) NOT NULL,
             )"""
+
     candidate = """CREATE TABLE IF NOT EXISTS candidate (
                     id serial PRIMARY  KEY NOT NULL,
                     office_id INT  NOT  NULL REFERENCES office(id) ON  DELETE  CASCADE ,
