@@ -3,32 +3,38 @@ HOST: http://polls.apiblueprint.org/
 
 # Politicoappapi
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Politico enables citizens give their mandate to politicians running for different government offices  while building trust in the process through transparency. 
 
-## Questions Collection [/questions]
 
-### List All Questions [GET]
 
+
+### List All Parties [GET]
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
+                
+                "Parties": [
+                     {
+            "hqAddress": "nairobi",
+            "id": 1,
+            "logoUrl": "www.mwm.com",
+            "party_name": "jubilee"
+        },     "hqAddress": "Nakuru",
+            "id": 2,
+            "logoUrl": "https://kanu.co.ke",
+            "party_name": "KANU"
+        }, {
+            "hqAddress": "Nakuru",
+            "id": 3,
+            "logoUrl": "https://odm.com",
+            "party_name": "PNU"
+        }, {
+            "hqAddress": "THIKA",
+            "id": 4,
+            "logoUrl": "https://odm.co.KE",
+            "party_name": "PPA"
+        }
                 ]
             }
         ]
