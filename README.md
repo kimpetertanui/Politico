@@ -57,7 +57,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Home]https://kimpetertanui.github.io/Politico/UI/) - The web framework used
+* [Home](https://kimpetertanui.github.io/Politico/UI/) - The web framework used
 * [View Results](https://maven.apache.org/) - Dependency Management
 * [Politician Loin](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
