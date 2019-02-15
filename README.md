@@ -8,16 +8,15 @@ Politico is an online voting platform that enables citizens give their mandate t
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### HOME PAGE
-
+* [Home](https://kimpetertanui.github.io/Politico/UI/) - The web framework used
 ```
 Click [Home](https://kimpetertanui.github.io/Politico/UI/index.html) to visit the home page of Politico voting paltform
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+* [View Results](https://kimpetertanui.github.io/Politico/UI/view_results.html) - Dependency Management
 
-Say what the step will be
 
 ```
 Give the example
@@ -33,11 +32,11 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+* [Politician Login](https://kimpetertanui.github.io/Politico/UI/politician_login.html) - Used to generate RSS Feeds
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+* [User/Voter Login](https://kimpetertanui.github.io/Politico/UI/user_login.html) - Used to generate RSS Feeds
 
 ```
 Give an example
@@ -45,7 +44,7 @@ Give an example
 
 ### And coding style tests
 
-Explain what these tests test and why
+* [User/Voting Page](https://kimpetertanui.github.io/Politico/UI/vote.html) - Used to generate RSS Feeds
 
 ```
 Give an example
@@ -57,9 +56,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Home](https://kimpetertanui.github.io/Politico/UI/) - The web framework used
-* [View Results](https://maven.apache.org/) - Dependency Management
-* [Politician Loin](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+* [User/View Results](https://kimpetertanui.github.io/Politico/UI/view_parties.html) - Used to generate RSS Feeds
+
 
 ## Contributing
 
