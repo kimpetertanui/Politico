@@ -18,10 +18,7 @@ def index():
 
 @b_party.route("/parties",methods=['GET'])
 def getAllParties():
-
-    return make_response(jsonify(
-        {"status":200},
-        {"data":parties}),200)
+    return jsonify({"data":parties,"status":200}),200
 
 
 @b_party.route("/parties/<partyID>",methods=['GET'])
@@ -39,11 +36,16 @@ def getParty(partyID):
                     "status": 200
                 }),200)
 
+            else:
+                    return make_response(jsonify({
+                        "status": 404,
+                        "message": "Could not find party with id {} kindly check it again".format(partyID)
+                    }), 404)
 
-        return make_response(jsonify({
-            "status": 404,
-            "message": "Could not find party with id {} kindly check it again".format(partyID)
-        }), 404)
+
+
+
+
     except:
         return jsonify({"status":400},{"message":"You have entered invalid party ID"})
 
@@ -61,6 +63,16 @@ def addparty():
             party_name = json_data["party_name"]
             hqAddress = json_data["hqAddress"]
             logoUrl=json_data["logoUrl"]
+            for  party in parties:
+                if party['party_name'] !=party_name and party['logoUrl'] !=logoUrl:
+                    continue
+                else:
+                    return jsonify({
+                        "error":"{} Already Exist".format(party_name),
+                        "status":409
+                    }),409
+
+
 
             new_party = {
                 "id":id,
@@ -92,13 +104,11 @@ def deleteParty(partyID):
                    "status": 200,
                    "data": "deleted successfully"
                }), 200)
-           # elif not party:
-           #     return "Please enter party ID to delete"
-           # else:
-               return make_response(jsonify({
-                   "status": 404,
-                   "msg": "could not find party with ID {}".format(partyID)
-               }), 404)
+
+           return make_response(jsonify({
+               "status": 404,
+               "msg": "could not find party with ID {}".format(partyID)
+           }), 404)
    except:
        return jsonify({"status": 400}, {"message": "Please enter a valid party ID to delete"})
 
@@ -114,9 +124,8 @@ def party_update(partyID):
                 "status":200,
                  "data":"updated  the party with party ID {} ".format(partyID)
             }),200)
-        elif party in parties:
-            return "Party Already exist"
-        else:
+        # elif party in parties:
+        #     return "Party Already exist"
             update_party = {
                 "party_name": party['party_name']
 

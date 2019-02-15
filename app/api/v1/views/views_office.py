@@ -15,7 +15,7 @@ def home():
 
 @v1.route("/offices",methods=['GET'])
 def getAllOffices():
-    return make_response(jsonify(offices), 200)
+    return jsonify({"data": offices, "status": 200}), 200
 
 
 @v1.route("/offices/<officeID>",methods=['GET'])
@@ -41,29 +41,52 @@ def getOffice(officeID):
 def addOffice():
     json_data = request.get_json(force=True)
     data=json.dumps(json_data)
-    datadict=ast.literal_eval(data)
-    print (type(datadict))
-    print(datadict)
+    if (json_data['type'] is not "") and (json_data["name"] is not ""):
+        datadict=ast.literal_eval(data)
+        name=datadict['name']
+        type=datadict['type']
+        id = len(offices) + 1
+        office_type = json_data["type"]
+        office_name = json_data["name"]
+        if isinstance(name,str) and isinstance(type,str):
+            for office in offices:
+                if office['name'] !=name :
+                    continue
+                else:
+                    return jsonify({
+                        "error":"{} already exist".format(name),
+                        "status":409
+                    }),409
 
 
-    id = len(offices)+1
-    office_type = json_data["type"]
-    office_name = json_data["name"]
+            new_office = {
+                "id": id,
+                "type": office_type,
+                "name": office_name
 
-    new_office = {
-        "id": id,
-        "type": office_type,
-        "name": office_name
-    
-    }
+            }
 
-    print(new_office)
-    offices.append(new_office)
+            print(new_office)
+            offices.append(new_office)
+
+            return make_response(jsonify({
+                "status": 201,
+                "data": [new_office]
+            }), 201)
+
+        else:
+            return jsonify({"status":404,"Message":"Enter valid data"})
+
 
     return make_response(jsonify({
-        "status": 201,
-        "data": [new_office]
-    }), 201)
+        "status": 401,
+        "message": "Missing required fields"
+    }))
+
+
+
+
+
 
 
 @v1.route("/offices/<officeID>", methods=['DELETE'])

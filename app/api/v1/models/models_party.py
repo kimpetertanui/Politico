@@ -1,5 +1,5 @@
 from flask import Flask,jsonify,request,make_response
-parties=[]
+parties=[{'id':1,'party_name':'jubilee','hqAddress':'nairobi','logoUrl':'www.mwm.com'}]
 
 class Parties:
     def __init__(self,id,party_name,hqAddress,logoUrl):

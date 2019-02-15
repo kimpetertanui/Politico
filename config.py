@@ -24,6 +24,7 @@ class TestingConfig(Config):
    Our testing configuration class
    Set Debug to True
    """
+   ##
    DEBUG = True
 
 
