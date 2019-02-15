@@ -3,83 +3,38 @@
 Politico is an online voting platform that enables citizens give their mandate to politicians running for different government offices  while building trust in the process through transparency.
 
 ## Getting Started
-
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Follow the Header Links below to visit the Politico page
 
 ### HOME PAGE
-* [Home](https://kimpetertanui.github.io/Politico/UI/) - The web framework used
-```
-Click [Home](https://kimpetertanui.github.io/Politico/UI/index.html) to visit the home page of Politico voting paltform
+* [Home](https://kimpetertanui.github.io/Politico/UI/) - This is the landing page 
 ```
 
-### Installing
+```
 
-* [View Results](https://kimpetertanui.github.io/Politico/UI/view_results.html) - Dependency Management
+### View Results
+
+* [View Results](https://kimpetertanui.github.io/Politico/UI/view_results.html) - View results 
 
 
 ```
-Give the example
+Users can view resilts on clicking the link above.The election results have respective post offices
 ```
 
-And repeat
+## Politician Login
+
+* [Politician Login](https://kimpetertanui.github.io/Politico/UI/politician_login.html) - Login as a politician
+```
+On visiting politico page a user should be able to login as a politcal aspirant and declare interest to a particular office
+```
+
+### Voter Login
+
+* [User/Voter Login](https://kimpetertanui.github.io/Politico/UI/user_login.html) - Login as a voter
 
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-* [Politician Login](https://kimpetertanui.github.io/Politico/UI/politician_login.html) - Used to generate RSS Feeds
-
-### Break down into end to end tests
-
-* [User/Voter Login](https://kimpetertanui.github.io/Politico/UI/user_login.html) - Used to generate RSS Feeds
-
-```
-Give an example
+On visiting politico page a user should be able to login and vote
 ```
 
 ### And coding style tests
 
-* [User/Voting Page](https://kimpetertanui.github.io/Politico/UI/vote.html) - Used to generate RSS Feeds
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-
-* [User/View Results](https://kimpetertanui.github.io/Politico/UI/view_parties.html) - Used to generate RSS Feeds
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* [User/Admin](https://kimpetertanui.github.io/Politico/UI/admin.html) - Admin should be able to login and manage the system
