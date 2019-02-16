@@ -4,18 +4,11 @@ v1= Blueprint('api_v1', __name__, url_prefix='/api/v1')
 import ast
 import json
 
-@v1.route('/home', methods=['GET'])
-def home():
-    make_response(jsonify({
-        "status": 200,
-        "message": "Politico enables citizens give their mandate to the type of leaders they need "
-
-
-    }), 200)
 
 @v1.route("/offices",methods=['GET'])
 def getAllOffices():
-    return jsonify({"data": offices, "status": 200}), 200
+    return make_response(jsonify(offices))
+    # return jsonify({"data": offices, "status": 200}), 200
 
 
 @v1.route("/offices/<officeID>",methods=['GET'])
