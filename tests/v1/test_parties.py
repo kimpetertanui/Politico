@@ -76,12 +76,12 @@ class TestOffices(BaseTest):
 #
 #
 #
-# def tearDown(self):
-#     self.app=None
-#
-#
-#
-# if __name__ == '__main__':
-#     unittest.main
-#
-#
+def tearDown(self):
+    self.app=None
+
+
+
+if __name__ == '__main__':
+    unittest.main
+
+
