@@ -35,8 +35,8 @@ class db:
 
     def getAllUsers(self):
         create_tables()
-        curr = self.db.cursor()
-        curr.execute("""SELECT id,firstname,lastname,othernames,email,phonenumber,passporturl,password,isadmin FROM users""")
+        curr = db.cursor()
+        curr.execute("SELECT * FROM users")
         data = curr.fetchall()
         print (data)
         response = []

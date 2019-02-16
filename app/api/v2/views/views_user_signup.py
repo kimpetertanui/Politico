@@ -16,7 +16,7 @@ def home():
     }), 200)
 
 @v2.route('/users',methods=['GET'])
-def getusers(self):
+def getusers():
     users = db.getAllUsers()
     return make_response(jsonify(users), 200)
 
