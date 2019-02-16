@@ -23,7 +23,7 @@ class TestOffices(BaseTest):
         res = self.client.get(path='/api/v1/offices/1')
         self.assertEqual(res.status_code, 404)
 
-    
+
     def test_delete_office(self):
         self.client.post(path='/api/v1/offices', data=self.create_office, content_type='application/json')
         res = self.client.delete(path='/api/v1/offices/1')
