@@ -20,7 +20,7 @@ class TestOffices(BaseTest):
 
     def test_get_office(self):
         self.client.post(path='/api/v1/offices', data=self.create_office, content_type='application/json')
-        res = self.client.get(path='/api/v1/offices/1')
+        res = self.client.get(path='/api/v1/offices/3')
         self.assertEqual(res.status_code, 200)
 
     # def test_update_office(self):
@@ -30,13 +30,13 @@ class TestOffices(BaseTest):
 
     def test_delete_office(self):
         self.client.post(path='/api/v1/offices', data=self.create_office, content_type='application/json')
-        res = self.client.delete(path='/api/v1/offices/7')
+        res = self.client.delete(path='/api/v1/offices/1')
         self.assertEqual(res.status_code, 200)
         print(res)
 
     def get_missing_office(self):
         self.client.post(path='/api/v1/offices', data=self.create_office, content_type='application/json')
-        res = self.client.get(path='/api/v1/offices/6')
+        res = self.client.get(path='/api/v1/offices/1')
         self.assertEqual(res.status_code, 400)
     #
     # def test_get_office_home(self):

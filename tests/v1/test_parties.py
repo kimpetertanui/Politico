@@ -19,17 +19,17 @@ class TestOffices(BaseTest):
 
     def test_get_party(self):
         self.client.post(path='/api/v1/parties', data=self.create_party, content_type='application/json')
-        res = self.client.get(path='/api/v1/parties/2')
+        res = self.client.get(path='/api/v1/parties/1')
         self.assertEqual(res.status_code, 200)
 
     def test_update_party(self):
         self.client.post(path='/api/v1/parties', data=self.create_party, content_type='application/json')
-        res = self.client.patch(path='/api/v1/parties/3')
+        res = self.client.patch(path='/api/v1/parties/2')
         self.assertEqual(res.status_code, 200)
 
     def test_delete_party(self):
         self.client.post(path='/api/v1/parties', data=self.create_party, content_type='application/json')
-        res = self.client.delete(path='/api/v1/parties/1')
+        res = self.client.delete(path='/api/v1/parties/2')
         self.assertEqual(res.status_code, 200)
     def test_get_party_index(self):
         self.client.post(path='/api/v1/index', data=self.create_party, content_type='application/json')

@@ -1,4 +1,4 @@
-offices = []
+offices = [{"id":1,"type":"Federal","name":"Senate"}]
 class Offices:
     def __init__(self,id,type,name):
         self.id=len(offices)+1

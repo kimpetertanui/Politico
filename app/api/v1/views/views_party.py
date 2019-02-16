@@ -118,7 +118,7 @@ def party_update(partyID):
         if party ['id']==int(partyID):
 
             data=request.get_json()
-            new_name=data['party_name']
+            # new_name=data['party_name']
             party['party_name']=data['party_name']
             return make_response(jsonify({
                 "status":200,
@@ -126,12 +126,12 @@ def party_update(partyID):
             }),200)
         # elif party in parties:
         #     return "Party Already exist"
-            update_party = {
+        update_party = {
                 "party_name": party['party_name']
 
             }
-            parties.append(update_party)
-            return make_response(jsonify({
+        parties.append(update_party)
+        return make_response(jsonify({
                 "status": 200,
                 "data": [update_party]
             }), 200)

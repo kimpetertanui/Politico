@@ -17,10 +17,13 @@ class Parties:
             "logoUrl":self.logoUrl,
         }
 
-        return  make_response(jsonify({
-            "satus":201,
-            "message":"created successfully"
-        }),201)
+        return parties(party)
+
+        #
+        # return  make_response(jsonify({
+        # "satus":201,
+        # "message":"created successfully"
+        # }),201)
 
     # def getParty(self, id):
     #     for party in parties:
