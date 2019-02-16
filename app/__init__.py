@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, make_response, request
 from config import app_config
-import psycopg2
+
 import os
 from app.api.v1.views.views_office import v1
 from app.api.v2.views.views_user_signup import v2
