@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # candidates = []
 # class Candidates:
 #     def __init__(self,id,office,party,candidate):
@@ -21,3 +22,7 @@
 #         return candidates.append(new_candidate)
 #
 #
+=======
+
+
+>>>>>>> 0ce6589f3a84c5be24facb929a9f73b852583f07

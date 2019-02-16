@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vote = []
 # class Vote:
 #     def __init__(self,id,createdOn,createdBy,office,candidate):
@@ -23,3 +24,7 @@
 #         return vote.append(new_vote)
 #
 #
+=======
+
+
+>>>>>>> 0ce6589f3a84c5be24facb929a9f73b852583f07

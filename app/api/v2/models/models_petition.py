@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # petition = []
 # class Petititon:
 #     def __init__(self,id,office,creadtedBy,text,evidence):
@@ -23,3 +24,7 @@
 #         return petition.append(new_petition)
 #
 #
+=======
+
+
+>>>>>>> 0ce6589f3a84c5be24facb929a9f73b852583f07
