@@ -18,7 +18,7 @@ def getOffice(officeID):
         for office in offices:
             print(type(office["id"]))
             if office["id"] == int(officeID):
-                return make_response(jsonify(office), 200)
+                return make_response(jsonify(office), 404)
 
         return make_response(jsonify({
             "code": 404,

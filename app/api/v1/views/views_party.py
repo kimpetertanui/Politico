@@ -101,9 +101,9 @@ def deleteParty(partyID):
            if party["id"] == int(partyID):
                parties.remove(party)
                return make_response(jsonify({
-                   "status": 200,
+                   "status": 404,
                    "data": "deleted successfully"
-               }), 200)
+               }), 404)
 
            return make_response(jsonify({
                "status": 404,
